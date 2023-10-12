@@ -1,39 +1,26 @@
-import React, {Component, Suspense} from 'react';
 import './App.css';
-import {useTranslation, withTranslation} from "react-i18next";
+import {useTranslation} from "react-i18next";
+import {HighOrderComponent} from "./components/HighOrderComponent";
+import {LanguageSelector} from "./components/LanguageSelector";
 
-function HeaderComponent()
-{
-    const [t, i18n] = useTranslation('common');
-    return <div>
-        <h1>{t('welcome.title', {framework:'React'})}</h1>
-        <button onClick={() => i18n.changeLanguage('de')}>de</button>
-        <button onClick={() => i18n.changeLanguage('en')}>en</button>
-    </div>
-}
+function App() {
 
-class HighOrderComponent extends Component {
-    render() {
-        const { t } = this.props;
-        console.log(this.props);
+    const {t} = useTranslation("common");
 
-        return (
-            <h1>{t('welcome.title', {framework:'React'})}</h1>
-        )
-    }
-}
-const HighOrderComponentTranslated = withTranslation('common')(HighOrderComponent)
-
-function App()
-{
     return (
-        <Suspense fallback="loading">
-            <div className="App">
-                <HeaderComponent/>
-                <HighOrderComponentTranslated/>
-            </div>
-        </Suspense>
+        <div className="App">
+            <h1>{t('app.title')}</h1>
+            <LanguageSelector/>
+            <p>{t('app.interpolation', {framework:'react-i18next'})}</p>
+            <p>{t('app.format.numbers', {pi:3.14159265359})}</p>
+            <p>{t('app.format.numbers-limit', {pi:3.14159265359})}</p>
+            <p>{t('app.format.currency', {val:49.99})}</p>
+            <p>{t('app.format.datetime', {now:new Date()})}</p>
+            <p>{t('app.format.relative-time', {rel:10})}</p>
+            <HighOrderComponent/>
+        </div>
     );
 }
 
 export default App;
+
