@@ -1,23 +1,29 @@
 {
 	"app": {
 		"format": {
-			"currency": "Total: {{val, currency(USD)}}",
+			"curreny": "Total: {{val, currency(USD)}}",
 			"datetime": "Today is {{now, datetime}}",
 			"numbers": "This is pi: {{pi, number}}.",
 			"numbers-limit": "This is pi: {{pi, number(minimumFractionDigits: 7) }}.",
 			"relative-time": "Something wonderful happens {{rel, relativetime}}!"
 		},
-		"interpolation": "This translation example is using {{framework}}.",
-		"title": "react-i18next translation example"
+		"interpolation": "This translation example is using {{framework}}."
 	},
-	"hoc": {
-		"text": "This is a text used inside a High Order Component (HOC)"
-	},
-	"language-selector": {
-		"label": "Select your language:",
-		"languages": {
-			"de": "German",
-			"en": "English"
+	"components": {
+		"func-component": {
+			"text": "This text is used inside a function component!",
+			"title": "Function component"
+		},
+		"hoc-component": {
+			"text": "This text is used inside an hoc component!",
+			"title": "HOC component"
+		},
+		"language-selector": {
+			"label": "Select your language:",
+			"languages": {
+				"de": "German",
+				"en": "English"
+			}
 		}
 	}
 }
