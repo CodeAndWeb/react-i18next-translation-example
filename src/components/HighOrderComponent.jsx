@@ -1,6 +1,7 @@
 import '../App.css';
 import {withTranslation} from "react-i18next";
 import {Component} from "react";
+import PropTypes from "prop-types";
 
 class HighOrderComponentBody extends Component {
     render() {
@@ -10,5 +11,10 @@ class HighOrderComponentBody extends Component {
         )
     }
 }
-export const HighOrderComponent = withTranslation('common')(HighOrderComponentBody)
 
+HighOrderComponentBody.propTypes = {
+    t: PropTypes.func.isRequired,
+};
+
+
+export const HighOrderComponent = withTranslation('common')(HighOrderComponentBody)

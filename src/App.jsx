@@ -1,10 +1,9 @@
-import './App.css';
-import {useTranslation} from "react-i18next";
 import {HighOrderComponent} from "./components/HighOrderComponent";
 import {LanguageSelector} from "./components/LanguageSelector";
+import './App.css'
+import {useTranslation} from "react-i18next";
 
 function App() {
-
     const {t} = useTranslation("common");
 
     return (
@@ -23,4 +22,3 @@ function App() {
 }
 
 export default App;
-
