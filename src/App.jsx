@@ -2,7 +2,7 @@ import './App.css';
 import FunctionComponent from "./components/FunctionComponent.jsx";
 import {HighOrderComponent} from "./components/HighOrderComponent.jsx";
 import {useTranslation} from "react-i18next";
-import {LanguageSelector} from "./components/LanguageSelector.jsx";
+import {LanguageSelector} from "./components/LanguageSelector";
 
 function App() {
 
@@ -14,6 +14,7 @@ function App() {
             <FunctionComponent/>
             <HighOrderComponent/>
 
+            <h2>{t('app.parameters.title')}</h2>
             <p>{t('app.interpolation', {framework: 'react-i18next'})}</p>
             <p>{t('app.format.numbers', {pi: 3.14159265359})}</p>
             <p>{t('app.format.numbers-limit', {pi: 3.14159265359})}</p>

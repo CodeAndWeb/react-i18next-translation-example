@@ -1,13 +1,16 @@
 {
 	"app": {
 		"format": {
-			"curreny": "Insgesamt: {{val, currency(USD)}}",
+			"currency": "Gesamt: {{val, currency(USD)}}",
 			"datetime": "Heute ist {{now, datetime}}",
-			"numbers": "Dies ist Pi: {{pi, number}}.",
-			"numbers-limit": "Dies ist Pi: {{pi, number(minimumFractionDigits: 7) }}.",
-			"relative-time": "Etwas Wunderbares geschieht {{rel, relativetime}}!"
+			"numbers": "Das ist Pi: {{pi, number}}.",
+			"numbers-limit": "Das ist Pi: {{pi, number(minimumFractionDigits: 7) }}.",
+			"relative-time": "Etwas Wundervolles passiert {{rel, relativetime}}!"
 		},
-		"interpolation": "Dieses Übersetzungsbeispiel verwendet {{framework}}."
+		"interpolation": "Dieses Übersetzungsbeispiel verwendet {{framework}}.",
+		"parameters": {
+			"title": "Text mit Parametern:"
+		}
 	},
 	"components": {
 		"func-component": {
@@ -19,7 +22,7 @@
 			"title": "HOC-Komponente"
 		},
 		"language-selector": {
-			"label": "Wählen Sie Ihre Sprache:",
+			"label": "Wähle deine Sprache",
 			"languages": {
 				"de": "Deutsch",
 				"en": "Englisch"
